@@ -1,0 +1,14 @@
+Features:
+~ Move with Chip staying centered until the board reaches an edge. 
+~ Move with arrow keys and quit with the escape key
+~ Have walls that cannot be passed through
+~ Have a target tile that must be reached
+~ HAve keys that must be collected to pass corresponding gates. 
+~ Animated walking
+~ Animated wildlife that blocks the way
+
+Screenshots:
+The screenshot I have shows me attempting to display a simple grid to represent the board. However, when trying to
+run the start function, I'm unable to get eclipse to run it. So I will have to continue with looking more into how debugging
+in eclipse is done properly in order to move forward. In the screenshot it shows that the IDE wants to default to running,
+the last assignment, while no main entrance is found for the current project. 
