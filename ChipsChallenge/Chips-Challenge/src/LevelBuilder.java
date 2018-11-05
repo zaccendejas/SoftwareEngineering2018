@@ -14,15 +14,19 @@ public class LevelBuilder {
     public LevelBuilder(){
         this.chipBuilder = new IChipBuilder[2];
         this.chipBuilder[0] = new LevelOneChipBuilder();
+        this.chipBuilder[1] = new LevelTwoChipBuilder();
 
         this.tileBuilder = new ITileBuilder[2];
         this.tileBuilder[0] = new LevelOneTileBuilder();
+        this.tileBuilder[1] = new LevelTwoTileBuilder();
 
         this.collectableBuilder = new ICollectableBuilder[2];
         this.collectableBuilder[0] = new LevelOneCollectableBuilder();
+        this.collectableBuilder[1] = new LevelTwoCollectableBuilder();
 
         this.obstacleBuilder = new IObstacleBuilder[2];
         this.obstacleBuilder[0] = new LevelOneObstacleBuilder();
+        this.obstacleBuilder[1] = new LevelTwoObstacleBuilder();
     }
 
     public void BuildLevel(int level, int scale){

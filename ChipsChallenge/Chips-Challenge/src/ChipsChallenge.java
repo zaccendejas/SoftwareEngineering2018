@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -58,6 +59,9 @@ public class ChipsChallenge extends Application {
                 case RIGHT:
                     this.controller.AttemptRight();
                     break;
+                case ESCAPE:
+                    Platform.exit();
+                    System.exit(0);
             }
         });
         this.stage.setTitle("Chip's Challenge!");
@@ -70,7 +74,7 @@ public class ChipsChallenge extends Application {
         this.levelBuilder.clear();
         this.rootMap.getChildren().removeAll();
         this.rootInventory.getChildren().removeAll();
-        this.levelBuilder.BuildLevel(0, this.scale);
+        this.levelBuilder.BuildLevel(1, this.scale);
         this.display = new LevelDisplay(this.levelBuilder.getTileMap(), this.levelBuilder.getCollectables(), this.levelBuilder.getObstacles(), this.levelBuilder.getChip(), this.scale);
         this.controller = new GameController(this.levelBuilder.getTileMap(), this.levelBuilder.getCollectables(), this.levelBuilder.getObstacles(), this.levelBuilder.getChip(), this.display, this);
         this.display.Display(this.rootMap, this.rootInventory);

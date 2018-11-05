@@ -136,25 +136,30 @@ public class LevelDisplay implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        String blueText = "x" + this.inventory.getBlueKeys();
-        this.blueText.setText(blueText);
+        if (o instanceof Inventory ){
+            if ((Inventory)o == this.inventory){
+                String blueText = "x" + this.inventory.getBlueKeys();
+                this.blueText.setText(blueText);
 
-        String greenText = "x" + this.inventory.getGreenKeys();
-        this.greenText.setText(greenText);
+                String greenText = "x" + this.inventory.getGreenKeys();
+                this.greenText.setText(greenText);
 
-        String yellowText = "x"  + this.inventory.getYellowKeys();
-        this.yellowText.setText(yellowText);
+                String yellowText = "x"  + this.inventory.getYellowKeys();
+                this.yellowText.setText(yellowText);
 
-        String redText = "x" + this.inventory.getRedKeys();
-        this.redText.setText(redText);
+                String redText = "x" + this.inventory.getRedKeys();
+                this.redText.setText(redText);
 
-        String challengeText = "x" + this.inventory.getChallengeKeys();
-        this.challengeText.setText(challengeText);
+                String challengeText = "x" + this.inventory.getChallengeKeys();
+                this.challengeText.setText(challengeText);
 
-        if (this.inventory.hasFlippers()){
-            this.fippersText.setText("Equipped");
-        }else{
-            this.fippersText.setText("Unequipped");
+                if (this.inventory.hasFlippers()){
+                    this.fippersText.setText("Equipped");
+                }else{
+                    this.fippersText.setText("Unequipped");
+                }
+
+            }
         }
 
     }
