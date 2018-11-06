@@ -20,5 +20,5 @@ The *LevelDisplay* class observes the *Inventory* class in order to change the t
 =============
 Gates and Walls inherit from the abstract Obstacle class, allowing the system to contain a data structure of obstacles with varying displays and logic for interaction. 
 Keys and Flippers inherit from the abstract Collectable class for the same reason.
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If I could re-design this project I would change how I implemented the TileBuilders. The process of coding 125 tiles was tedious and could have been more systematic. I also would have used more arrays within classes to hold the duplicated private data types. 
