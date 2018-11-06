@@ -73,7 +73,7 @@ public class ChipsChallenge extends Application {
     public void ClearLevelOne(){
         this.levelBuilder.clear();
         this.rootMap.getChildren().removeAll();
-        this.rootInventory.getChildren().removeAll();
+        this.rootInventory.getChildren().clear();
         this.levelBuilder.BuildLevel(1, this.scale);
         this.display = new LevelDisplay(this.levelBuilder.getTileMap(), this.levelBuilder.getCollectables(), this.levelBuilder.getObstacles(), this.levelBuilder.getChip(), this.scale);
         this.controller = new GameController(this.levelBuilder.getTileMap(), this.levelBuilder.getCollectables(), this.levelBuilder.getObstacles(), this.levelBuilder.getChip(), this.display, this);
